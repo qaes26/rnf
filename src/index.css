@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --color-romantic-pink: #ffd1dc;
+  --color-romantic-deep: #ff6b81;
+  --color-romantic-gold: #ffd700;
+  --color-romantic-bg: #fff0f5;
+  --color-romantic-text: #4a4a4a;
+
+  --animate-fade-in: fadeIn 2s ease-in forwards;
+  --animate-fade-out: fadeOut 1s ease-out forwards;
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-romantic-bg text-romantic-text overflow-hidden;
+    font-family: 'Times New Roman', serif;
+  }
+}
+
+@utility delay-500 {
+  transition-delay: 500ms;
+}
+
+@utility delay-700 {
+  transition-delay: 700ms;
+}
+
+@utility delay-1000 {
+  transition-delay: 1000ms;
+}
+
+@utility delay-1500 {
+  transition-delay: 1500ms;
+}
+
+@utility duration-2000 {
+  transition-duration: 2000ms;
+}
